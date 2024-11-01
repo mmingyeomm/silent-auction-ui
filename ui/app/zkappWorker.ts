@@ -1,14 +1,30 @@
-import { Mina, PublicKey, fetchAccount } from 'o1js';
+import { Field, Mina, PublicKey, SmartContract, State, fetchAccount, method, state } from 'o1js';
 import * as Comlink from "comlink";
-import type { Add } from '../../contracts/src/Add';
 
 type Transaction = Awaited<ReturnType<typeof Mina.transaction>>;
 
-const state = {
+const states = {
   AddInstance: null as null | typeof Add,
   zkappInstance: null as null | Add,
   transaction: null as null | Transaction,
 };
+
+export class Add extends SmartContract {
+    @state(Field) num = State<Field>();
+  
+    init() {
+      super.init();
+      this.num.set(Field(1));
+    }
+  
+    @method async update() {
+      const currentState = this.num.getAndRequireEquals();
+      const newState = currentState.add(2);
+      this.num.set(newState);
+    }
+  }
+  
+
 
 export const api = {
   async setActiveInstanceToDevnet() {
@@ -17,11 +33,10 @@ export const api = {
     Mina.setActiveInstance(Network);
   },
   async loadContract() {
-    const { Add } = await import('../../contracts/src/Add');
-    state.AddInstance = Add;
+    states.AddInstance = Add;
   },
   async compileContract() {
-    await state.AddInstance!.compile();
+    await states.AddInstance!.compile();
   },
   async fetchAccount(publicKey58: any) {
     const publicKey = PublicKey.fromBase58(publicKey58);
@@ -29,22 +44,22 @@ export const api = {
   },
   async initZkappInstance(publicKey58: string) {
     const publicKey = PublicKey.fromBase58(publicKey58);
-    state.zkappInstance = new state.AddInstance!(publicKey);
+    states.zkappInstance = new states.AddInstance!(publicKey);
   },
   async getNum() {
-    const currentNum = await state.zkappInstance!.num.get();
+    const currentNum = await states.zkappInstance!.num.get();
     return JSON.stringify(currentNum.toJSON());
   },
   async createUpdateTransaction() {
-    state.transaction = await Mina.transaction(async () => {
-      await state.zkappInstance!.update();
+    states.transaction = await Mina.transaction(async () => {
+      await states.zkappInstance!.update();
     });
   },
   async proveUpdateTransaction() {
-    await state.transaction!.prove();
+    await states.transaction!.prove();
   },
   async getTransactionJSON() {
-    return state.transaction!.toJSON();
+    return states.transaction!.toJSON();
   },
 };
 
