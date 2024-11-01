@@ -26,7 +26,7 @@ export default class ZkappWorkerClient {
     return this.remoteApi.compileContract();
   }
 
-  async fetchAccount(publicKeyBase58: string) {
+  async fetchAccount(publicKeyBase58: any) {
     return this.remoteApi.fetchAccount(publicKeyBase58);
   }
 

@@ -23,7 +23,7 @@ export const api = {
   async compileContract() {
     await state.AddInstance!.compile();
   },
-  async fetchAccount(publicKey58: string) {
+  async fetchAccount(publicKey58: any) {
     const publicKey = PublicKey.fromBase58(publicKey58);
     return fetchAccount({ publicKey });
   },
