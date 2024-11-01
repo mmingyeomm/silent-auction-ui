@@ -715,8 +715,8 @@ function CreatePage() {
         const publicKeyBase58 = await mina.requestAccounts();
         const owner = publicKeyBase58[0];
         const result = await transferNFT({
-            newOwner: owner,
-            owner: "B62qkUQoebsMDhaC6vn1PiherKgNeMW4p1hxWKhFw7xkNZwjy4zhDRJ",
+            newOwner: "B62qkUQoebsMDhaC6vn1PiherKgNeMW4p1hxWKhFw7xkNZwjy4zhDRJ",
+            owner: owner,
             address: nftAddress,
             showText,
             showPending,
@@ -1148,7 +1148,7 @@ module.exports = {"container":"Home_container__d256j","main":"Home_main__VkIEL",
 },
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-/******/ __webpack_require__.O(0, [733,127,917,412,369,971,23,744], function() { return __webpack_exec__(1696); });
+/******/ __webpack_require__.O(0, [610,917,412,369,971,23,744], function() { return __webpack_exec__(1696); });
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ _N_E = __webpack_exports__;
 /******/ }
