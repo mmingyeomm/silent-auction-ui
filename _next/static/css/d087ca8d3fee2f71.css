@@ -1,0 +1,508 @@
+/* styles/AuctionInfo.module.css */
+.AuctionInfo_pageContainer__3iKFd {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .AuctionInfo_logo__QaWuY {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .AuctionInfo_nav__TkM9o {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .AuctionInfo_navLink__GuNQ9 {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .AuctionInfo_navLink__GuNQ9:hover {
+    opacity: 0.8;
+  }
+  
+  .AuctionInfo_mainContent__TGvNa {
+    flex: 1 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .AuctionInfo_twoColumnLayout__NKg_3 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Changed from 2fr 1fr */
+    grid-gap: 2rem;
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .AuctionInfo_leftColumn__cLOJg {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .AuctionInfo_rightColumn__fTmuM {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+  }
+  
+  .AuctionInfo_infoCard__ulyMT,
+  .AuctionInfo_nftDetailsSection__CxiKA,
+  .AuctionInfo_bidVerification__JYAah {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AuctionInfo_infoCard__ulyMT,
+  .AuctionInfo_nftDetailsSection__CxiKA {
+    padding: 2rem;
+  }
+  
+  .AuctionInfo_bidVerification__JYAah {
+    padding: 2.5rem;
+    min-width: 320px;
+  }
+  
+  .AuctionInfo_title__VIm3_ {
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .AuctionInfo_nftContent__2vzxz {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .AuctionInfo_nftImageContainer__IFEyF {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .AuctionInfo_nftImage__L14nl {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .AuctionInfo_nftInfo__sxzq_ {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .AuctionInfo_infoRow__ypHIE {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .AuctionInfo_infoRow__ypHIE strong {
+    min-width: 150px;
+    color: #666;
+  }
+  
+  .AuctionInfo_copyButton__M0wmz {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .AuctionInfo_copyButton__M0wmz:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .AuctionInfo_descriptionRow__zDJLO {
+    margin-top: 1rem;
+  }
+  
+  .AuctionInfo_descriptionRow__zDJLO strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .AuctionInfo_descriptionRow__zDJLO p {
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .AuctionInfo_bidKeyForm__wtA1J {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .AuctionInfo_bidKeyInput__bEUZK {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .AuctionInfo_bidKeyInput__bEUZK:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.1);
+  }
+  
+  .AuctionInfo_verifyButton__s3PZq {
+    padding: 0.75rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+  }
+  
+  .AuctionInfo_verifyButton__s3PZq:hover {
+    background-color: #ff4fa7;
+  }
+  
+  .AuctionInfo_verifyButton__s3PZq:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .AuctionInfo_error__w_P_n {
+    color: #dc3545;
+    background-color: #ffe6e6;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .AuctionInfo_personalBidInfo__FOTH6 {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  
+  .AuctionInfo_personalBidInfo__FOTH6 h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .AuctionInfo_bidInfoGrid__5dQ7_ {
+    display: grid;
+    grid-gap: 1.2rem;
+    gap: 1.2rem;
+  }
+  
+  .AuctionInfo_bidInfoItem__eqGoE {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+  
+  .AuctionInfo_bidInfoItem__eqGoE label {
+    font-weight: 600;
+    color: #666;
+  }
+  
+  .AuctionInfo_bidInfoItem__eqGoE span {
+    color: #333;
+  }
+  
+  .AuctionInfo_transactionLink___boUw {
+    color: #0066cc;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .AuctionInfo_transactionLink___boUw:hover {
+    color: #0052a3;
+    text-decoration: underline;
+  }
+  
+  .AuctionInfo_merkleContainer__TnRFw {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .AuctionInfo_winner__9PQAu {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  .AuctionInfo_notWinner__CMWb4 {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .AuctionInfo_bidStatus__LOyKW {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* AuctionInfo.module.css */
+.AuctionInfo_errorContainer__vAMil {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.AuctionInfo_errorCard__4rrlQ {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 28rem;
+  width: 100%;
+}
+
+.AuctionInfo_errorTitle__u42Vd {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.AuctionInfo_errorMessage__t1qGv {
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.AuctionInfo_button__pzLxI {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.AuctionInfo_primaryButton__639KL {
+  background-color: #2563eb;
+  color: white;
+}
+
+.AuctionInfo_primaryButton__639KL:hover {
+  background-color: #1d4ed8;
+}
+
+.AuctionInfo_secondaryButton__bkWAk {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.AuctionInfo_secondaryButton__bkWAk:hover {
+  background-color: #f9fafb;
+}
+
+.AuctionInfo_spinner__aeM9V {
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #2563eb;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: AuctionInfo_spin__1fQID 1s linear infinite;
+}
+
+@keyframes AuctionInfo_spin__1fQID {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  
+  .AuctionInfo_winnerInfo__20yOU {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .AuctionInfo_winnerInfo__20yOU h4 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .AuctionInfo_loading__U53vK {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  .AuctionInfo_footer__cK2d9 {
+    background: #ff69b4;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .AuctionInfo_mainContent__TGvNa {
+      padding: 1.5rem;
+    }
+    
+    .AuctionInfo_twoColumnLayout__NKg_3 {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  .AuctionInfo_errorMessage__t1qGv {
+    color: #ff0000;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .AuctionInfo_loadingMessage__NIBNa {
+    color: #2196f3;
+    background-color: #e3f2fd;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .AuctionInfo_mainContent__TGvNa {
+      padding: 1rem;
+    }
+  
+    .AuctionInfo_twoColumnLayout__NKg_3 {
+      grid-template-columns: 1fr;
+    }
+    
+    .AuctionInfo_rightColumn__fTmuM {
+      position: static;
+    }
+    
+    .AuctionInfo_nav__TkM9o {
+      gap: 1rem;
+    }
+  
+    .AuctionInfo_bidVerification__JYAah {
+      padding: 2rem;
+      min-width: 100%;
+    }
+    
+    .AuctionInfo_bidInfoItem__eqGoE {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    
+    .AuctionInfo_bidInfoItem__eqGoE label {
+      margin-bottom: 0.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .AuctionInfo_nav__TkM9o {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .AuctionInfo_infoCard__ulyMT,
+    .AuctionInfo_nftDetailsSection__CxiKA,
+    .AuctionInfo_bidVerification__JYAah {
+      padding: 1rem;
+    }
+    
+    .AuctionInfo_infoRow__ypHIE {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .AuctionInfo_copyButton__M0wmz {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  
+
+  /* In your AuctionInfo.module.css */
+.AuctionInfo_nftDetailsSection__CxiKA {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adds space between the heading and content */
+    padding: 2rem;
+  }
+  
+  .AuctionInfo_nftContent__2vzxz {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adds space between image and text content */
+  }
+  
+  .AuctionInfo_nftImageContainer__IFEyF {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 2rem; /* Adds specific space after the image */
+  }
+  
+  .AuctionInfo_nftImage__L14nl {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Add spacing for text elements */
+  .AuctionInfo_nftDetailsText__tyqzD {
+    margin-top: 1.5rem;
+  }
+  
+  /* If you have specific text elements, you can add spacing to them */
+  .AuctionInfo_nftDetailsText__tyqzD h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .AuctionInfo_nftDetailsText__tyqzD p {
+    margin-bottom: 0.75rem;
+  }
+  

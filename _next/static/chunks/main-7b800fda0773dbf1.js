@@ -5747,7 +5747,7 @@ class Router {
             const { BloomFilter } = __webpack_require__(8331);
             const routerFilterSValue = {"numItems":5,"errorRate":0.0001,"numBits":96,"numHashes":14,"bitArray":[1,0,1,1,1,0,1,1,0,0,1,1,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,1,0,0,0,0,0,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,0,0,1,1,0,1,0,1,0,0,1,0,0,1,1,0,0,1,1,0,0,0,1,1,0,1,0,0,0,1,0,0]};
             const staticFilterData = routerFilterSValue ? routerFilterSValue : undefined;
-            const routerFilterDValue = {"numItems":0,"errorRate":0.0001,"numBits":0,"numHashes":null,"bitArray":[]};
+            const routerFilterDValue = {"numItems":1,"errorRate":0.0001,"numBits":20,"numHashes":14,"bitArray":[0,1,0,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,1,0]};
             const dynamicFilterData = routerFilterDValue ? routerFilterDValue : undefined;
             if (staticFilterData == null ? void 0 : staticFilterData.numHashes) {
                 this._bfl_s = new BloomFilter(staticFilterData.numItems, staticFilterData.errorRate);
