@@ -17,7 +17,7 @@ export const api = {
     Mina.setActiveInstance(Network);
   },
   async loadContract() {
-    const { Add } = await import('../../contracts/build/src/Add.js');
+    const { Add } = await import('../../contracts/src/Add');
     state.AddInstance = Add;
   },
   async compileContract() {
