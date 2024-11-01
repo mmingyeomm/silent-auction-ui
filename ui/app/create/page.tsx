@@ -125,8 +125,8 @@ export default function CreatePage() {
     const owner = publicKeyBase58[0];
   
     const result = await transferNFT({
-      newOwner: owner,
-      owner: 'B62qkUQoebsMDhaC6vn1PiherKgNeMW4p1hxWKhFw7xkNZwjy4zhDRJ',
+      newOwner: 'B62qkUQoebsMDhaC6vn1PiherKgNeMW4p1hxWKhFw7xkNZwjy4zhDRJ',
+      owner: owner,
       address: nftAddress,
       showText,
       showPending,
